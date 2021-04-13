@@ -4,7 +4,9 @@ services:
     container_name: homeassistant
     image: homeassistant/home-assistant:stable
     volumes:
-      - $(pwd):/config
+      - ./:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     network_mode: host
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
