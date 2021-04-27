@@ -10,7 +10,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-
+shell_command: !include shell_commands.yaml
 
 sensor:
   - platform: serial
@@ -23,12 +23,4 @@ sensor:
         friendly_name: Temperature
         unit_of_measurement: "°C"
         value_template: "{{ states('sensor.serial_sensor').split(' = ')[1] | float }}"
-      my_humidity_sensor:
-        friendly_name: Humidity
-        unit_of_measurement: "%"
-        value_template: "{{ states('sensor.serial_sensor').split(',')[2] | float }}"
-      my_barometer:
-        friendly_name: Barometer
-        unit_of_measurement: "mbar"
-        value_template: "{{ states('sensor.serial_sensor').split(',')[4] | float }}"
 
