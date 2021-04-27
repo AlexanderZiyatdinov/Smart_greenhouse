@@ -8,9 +8,11 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
+script: !include scripts.yaml 
+script: !include restart_ha.yaml
 scene: !include scenes.yaml
 shell_command: !include shell_commands.yaml
+
 
 sensor:
   - platform: serial

@@ -1,0 +1,4 @@
+miscellaneous:
+  name: Перезагрузка Home Assistant
+  entities:
+    - script.restart_ha

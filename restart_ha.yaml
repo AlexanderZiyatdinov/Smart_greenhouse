@@ -1,0 +1,9 @@
+#Создание файла restart_ha.yaml
+restart_ha:
+  alias: Перезапускаем Home Assistant
+  sequence:
+    - alias: Restart Home Assistant
+      service: homeassistant.restart
+      
+      
+#Готово 
