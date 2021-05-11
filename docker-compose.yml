@@ -7,6 +7,7 @@ services:
       - ./:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-    network_mode: host
     devices:
-      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/stdin:/dev/stdin
+    ports:
+      - "8123:8123"

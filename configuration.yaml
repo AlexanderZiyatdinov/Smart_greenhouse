@@ -13,16 +13,16 @@ script: !include restart_ha.yaml
 scene: !include scenes.yaml
 shell_command: !include shell_commands.yaml
 
-
-sensor:
-  - platform: serial
-    serial_port: /dev/ttyACM0
-    baudrate: 9600
-
-  - platform: template
-    sensors:
-      my_temperature_sensor:
-        friendly_name: Temperature
-        unit_of_measurement: "°C"
-        value_template: "{{ states('sensor.serial_sensor').split(' = ')[1] | float }}"
-
+#
+#sensor:
+#  - platform: serial
+#    serial_port: /dev/stdin
+#    baudrate: 9600
+#
+#  - platform: template
+#    sensors:
+#      my_temperature_sensor:
+#        friendly_name: Temperature
+#        unit_of_measurement: "°C"
+#        value_template: "{{ states('sensor.serial_sensor').split(' = ')[1] | float }}"
+#
